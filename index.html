@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="zh-Hant" class="h-full"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;彩色詞彙測驗遊戲 🌈&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- TailwindCSS CDN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>darkMode: 'class',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>amberBtn: '#f59e0b', // A</p>
+<p class="p1"><span class="Apple-converted-space">            </span>greenBtn: '#10b981', // B</p>
+<p class="p1"><span class="Apple-converted-space">            </span>blueBtn:<span class="Apple-converted-space">  </span>'#3b82f6', // C</p>
+<p class="p1"><span class="Apple-converted-space">            </span>redBtn: <span class="Apple-converted-space">  </span>'#ef4444', // D</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn { transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; transform: translateZ(0); will-change: transform, box-shadow, filter; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:hover { transform: translateY(-4px) scale(1.05); filter: saturate(1.1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:active { transform: translateY(0px) scale(0.98); filter: brightness(.95) saturate(0.95); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.shadow-amber { box-shadow: 0 12px 24px rgba(245,158,11,.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.shadow-green { box-shadow: 0 12px 24px rgba(16,185,129,.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.shadow-blue<span class="Apple-converted-space">  </span>{ box-shadow: 0 12px 24px rgba(59,130,246,.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.shadow-red <span class="Apple-converted-space">  </span>{ box-shadow: 0 12px 24px rgba(239,68,68,.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:hover.shadow-amber { box-shadow: 0 18px 36px rgba(245,158,11,.55); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:hover.shadow-green { box-shadow: 0 18px 36px rgba(16,185,129,.55); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:hover.shadow-blue<span class="Apple-converted-space">  </span>{ box-shadow: 0 18px 36px rgba(59,130,246,.55); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fancy-btn:hover.shadow-red <span class="Apple-converted-space">  </span>{ box-shadow: 0 18px 36px rgba(239,68,68,.55); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.gradient-text { background: linear-gradient(90deg, #a855f7, #60a5fa, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.rainbow { background: linear-gradient(90deg,#ff0080,#ff8c00,#ffd700,#00ff6a,#00c2ff,#8a2be2); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(255,255,255,0.18); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dark .glass { background: rgba(0,0,0,0.28); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.confetti span { position: absolute; font-size: 28px; animation: fall 2.8s linear infinite; top: -10%; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fall { 0%{ transform: translateY(-10%) rotate(0deg); opacity:0;} 10%{opacity:1;} 100%{ transform: translateY(120vh) rotate(360deg); opacity:0;} }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="h-full min-h-screen bg-gradient-to-br from-purple-600 via-blue-500 to-pink-400 dark:from-[#2b1f3a] dark:via-[#1b2a44] dark:to-[#3a1f39] selection:bg-yellow-300/60"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="min-h-screen flex items-center justify-center p-4 md:p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="glass w-full max-w-3xl rounded-3xl shadow-2xl border border-white/20 dark:border-white/10 p-6 md:p-8 relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center justify-between mb-4 md:mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-2xl md:text-3xl font-extrabold tracking-wide gradient-text"&gt;🌈 彩色詞彙測驗 🎯&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="inline-flex items-center cursor-pointer select-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="darkToggle" type="checkbox" class="sr-only"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="mr-2 text-sm font-medium text-black/70 dark:text-white/80"&gt;深色模式&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="w-12 h-7 bg-white/60 dark:bg-black/40 rounded-full relative transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span id="thumb" class="absolute top-1 left-1 w-5 h-5 bg-white dark:bg-zinc-200 rounded-full transition-transform"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center justify-between text-sm font-semibold text-black/70 dark:text-white/80 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;🌟 進度&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="progressText"&gt;0 / 10&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-full h-3 bg-white/30 dark:bg-white/10 rounded-full overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="progressBar" class="h-full rainbow rounded-full transition-all duration-300 ease-out" style="width:0%"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="statusRow" class="flex flex-wrap items-center gap-3 text-sm text-black/80 dark:text-white/80 mb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="qCount" class="px-3 py-1 rounded-full bg-white/60 dark:bg-white/10"&gt;題目：&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="score" class="px-3 py-1 rounded-full bg-white/60 dark:bg-white/10"&gt;得分：&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="px-3 py-1 rounded-full bg-white/60 dark:bg-white/10"&gt;🤔 加油！&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rounded-2xl border border-white/20 dark:border-white/10 p-5 md:p-6 bg-white/30 dark:bg-white/5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-center mb-4 md:mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-sm md:text-base text-black/70 dark:text-white/70 mb-1"&gt;請選出正確的中文定義：&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="word" class="gradient-text text-3xl md:text-4xl font-extrabold tracking-wider"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="btnA" class="fancy-btn shadow-amber rounded-2xl px-4 py-4 text-left bg-amberBtn text-white font-semibold focus:outline-none focus:ring-4 ring-amber-300/50" data-key="A" aria-label="選項A"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-lg md:text-xl"&gt;🟡 A&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="optA" class="text-sm md:text-base opacity-95"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="btnB" class="fancy-btn shadow-green rounded-2xl px-4 py-4 text-left bg-greenBtn text-white font-semibold focus:outline-none focus:ring-4 ring-green-300/50" data-key="B" aria-label="選項B"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-lg md:text-xl"&gt;🟢 B&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="optB" class="text-sm md:text-base opacity-95"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="btnC" class="fancy-btn shadow-blue rounded-2xl px-4 py-4 text-left bg-blueBtn text-white font-semibold focus:outline-none focus:ring-4 ring-blue-300/50" data-key="C" aria-label="選項C"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-lg md:text-xl"&gt;🔵 C&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="optC" class="text-sm md:text-base opacity-95"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="btnD" class="fancy-btn shadow-red rounded-2xl px-4 py-4 text-left bg-redBtn text-white font-semibold focus:outline-none focus:ring-4 ring-red-300/50" data-key="D" aria-label="選項D"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-lg md:text-xl"&gt;🔴 D&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="optD" class="text-sm md:text-base opacity-95"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="feedback" class="text-center text-lg md:text-xl font-bold mt-4 h-8"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mt-5 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="restart" class="rounded-xl px-5 py-2.5 font-semibold bg-white/70 text-black hover:bg-white transition dark:bg-white/10 dark:text-white dark:hover:bg-white/20"&gt;🔄 重新開始&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-right text-sm text-black/70 dark:text-white/70"&gt;🌈🤔🎯🏆⭐🎉 祝你闖關成功！&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="finishOverlay" class="hidden absolute inset-0 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="glass w-full max-w-xl rounded-3xl p-8 text-center border border-white/30"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-4xl md:text-5xl font-extrabold gradient-text mb-3"&gt;🏆 完成挑戰！&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-lg md:text-xl text-black/90 dark:text-white/90 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>太棒了！你已經連續答對 &lt;span id="finalScore" class="font-bold"&gt;10&lt;/span&gt; 題 🎉🎉🎉</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex items-center justify-center gap-3 text-2xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;🌈&lt;/span&gt;&lt;span&gt;⭐&lt;/span&gt;&lt;span&gt;🎯&lt;/span&gt;&lt;span&gt;🎉&lt;/span&gt;&lt;span&gt;🥳&lt;/span&gt;&lt;span&gt;👏&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="playAgain" class="fancy-btn shadow-blue rounded-2xl px-6 py-3 font-bold text-white bg-blueBtn hover:brightness-110 transition"&gt;再玩一次！&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="confetti" aria-hidden="true" id="confetti"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const vocab = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Merge", zh:"合併" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Wrap text", zh:"自動換列" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Freeze", zh:"凍結" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Row", zh:"列" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Column", zh:"欄" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Scroll", zh:"滾動" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Abnormal", zh:"異常的" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Automatically", zh:"自動地" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Conditional", zh:"附有條件的" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Sort", zh:"排序" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Organize", zh:"整理" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Efficient", zh:"效率高的" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Custom Sort", zh:"自訂排序" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Chart", zh:"圖表" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Illustrate", zh:"說明" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Trend", zh:"趨勢" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Observation", zh:"觀察" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Comparison", zh:"比較" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Bar chart", zh:"棒形圖" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Pie chart", zh:"圓形圖" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Proportion", zh:"比例" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Distribution", zh:"分佈" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Insert", zh:"插入" },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ en:"Axis", zh:"軸" },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const TARGET_SCORE = 10;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let score = 0, askedCount = 0, askedIndices = [], current = null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const wordEl = document.getElementById('word');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const feedbackEl = document.getElementById('feedback');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const qCountEl = document.getElementById('qCount');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const scoreEl = document.getElementById('score');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const progressBar = document.getElementById('progressBar');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const progressText = document.getElementById('progressText');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const restartBtn = document.getElementById('restart');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finishOverlay = document.getElementById('finishOverlay');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finalScore = document.getElementById('finalScore');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const playAgain = document.getElementById('playAgain');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const confettiWrap = document.getElementById('confetti');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btns = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ key:'A', btn:document.getElementById('btnA'), opt:document.getElementById('optA') },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ key:'B', btn:document.getElementById('btnB'), opt:document.getElementById('optB') },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ key:'C', btn:document.getElementById('btnC'), opt:document.getElementById('optC') },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ key:'D', btn:document.getElementById('btnD'), opt:document.getElementById('optD') },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const shuffle = (arr)=&gt;{ const a=arr.slice(); for(let i=a.length-1;i&gt;0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const pickUnseenIndex = ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pool = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i=0;i&lt;vocab.length;i++) if (!askedIndices.includes(i)) pool.push(i);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (pool.length===0) return null;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return pool[Math.floor(Math.random()*pool.length)];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const updateTopBars = ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>qCountEl.innerHTML = `題目：&lt;b&gt;${askedCount}&lt;/b&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>scoreEl.innerHTML<span class="Apple-converted-space">  </span>= `得分：&lt;b&gt;${score}&lt;/b&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pct = Math.min(100, Math.round(score / TARGET_SCORE * 100));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>progressBar.style.width = pct + '%';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>progressText.textContent = `${score} / ${TARGET_SCORE}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const setButtonsEnabled = (enabled)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btns.forEach(({btn})=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.disabled = !enabled;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.style.opacity = enabled ? '1' : '0.8';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.style.cursor = enabled ? 'pointer' : 'not-allowed';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const makeConfetti = ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>confettiWrap.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const emojis = ['🌈','⭐','🎉','🎯','🥳','🏆','✨','🍀','🚀','👏'];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const count = 40;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i=0;i&lt;count;i++){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const s=document.createElement('span');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.textContent = emojis[Math.floor(Math.random()*emojis.length)];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.left = Math.random()*100 + '%';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.animationDelay = (Math.random()*1.5) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.animationDuration = (2 + Math.random()*2.5) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confettiWrap.appendChild(s);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const nextQuestion = ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.textContent = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.className = 'text-center text-lg md:text-xl font-bold mt-4 h-8';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (score &gt;= TARGET_SCORE) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>finalScore.textContent = TARGET_SCORE;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>finishOverlay.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>makeConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const idx = pickUnseenIndex();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (idx===null) { askedIndices=[]; return nextQuestion(); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>askedIndices.push(idx); askedCount++; updateTopBars();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const item = vocab[idx];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>wordEl.textContent = item.en;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const wrongs = shuffle(vocab.filter((_,i)=&gt;i!==idx).map(v=&gt;v.zh)).slice(0,3);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const options = shuffle([item.zh, ...wrongs]);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btns.forEach(({opt},i)=&gt; { opt.textContent = options[i]; });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>current = { index:idx, correctZh:item.zh, options };</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setButtonsEnabled(true);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const handleAnswer = (text)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!current) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setButtonsEnabled(false);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const isCorrect = text === current.correctZh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>score++;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.innerHTML = '✅ &lt;span class="text-emerald-700 dark:text-emerald-300"&gt;答對了！太讚啦～&lt;/span&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const correctIndex = current.options.indexOf(current.correctZh);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const correctKey = ['A','B','C','D'][correctIndex];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.innerHTML = `❌ &lt;span class="text-red-700 dark:text-red-300"&gt;答錯了！&lt;/span&gt; 正確解答是 &lt;b&gt;${current.correctZh}&lt;/b&gt;（${correctKey}）`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateTopBars();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(nextQuestion, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>btns.forEach(({btn,opt})=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pick = ()=&gt; handleAnswer(opt.textContent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener('click', pick, {passive:true});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener('touchstart', (e)=&gt;{ e.preventDefault(); pick(); }, {passive:false});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const resetGame = ()=&gt;{ score=0; askedCount=0; askedIndices=[]; finishOverlay.classList.add('hidden'); updateTopBars(); nextQuestion(); };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('restart').addEventListener('click', resetGame);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('playAgain').addEventListener('click', resetGame);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('playAgain').addEventListener('touchstart', (e)=&gt;{ e.preventDefault(); resetGame(); }, {passive:false});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const toggle = document.getElementById('darkToggle');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const thumb = document.getElementById('thumb');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const applyDark = (isDark)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.documentElement.classList.toggle('dark', isDark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>toggle.checked = isDark;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>thumb.style.transform = isDark ? 'translateX(20px)' : 'translateX(0px)';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try{ localStorage.setItem('quiz-dark', isDark ? '1' : '0'); }catch(e){}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>(function initTheme(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let fromLS = null;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try{ fromLS = localStorage.getItem('quiz-dark'); }catch(e){}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (fromLS !== null) applyDark(fromLS === '1');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else applyDark(window.matchMedia &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>toggle.addEventListener('change', ()=&gt; applyDark(toggle.checked));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateTopBars();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nextQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
